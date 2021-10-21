@@ -1,10 +1,10 @@
 .cardscontainer {
-  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .card {
   margin-top: 20px;
-  height: 200px;
+  min-width: 200px;
 }
 
 .fa-star {

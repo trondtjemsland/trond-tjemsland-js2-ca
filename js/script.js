@@ -1,32 +1,27 @@
-import { BASE_URL, headers } from './configs/configs.js';
+import { BASE_URL } from './configs/configs.js';
+import {
+	addToLocalStorage,
+	getFromLocalStorageItem,
+	favouriteStorage,
+} from './libs/localStorage.js';
+import { getAPI } from './libs/apiCalls.js';
+import { filteringAnArray } from './libs/filteringArray.js';
+import { articleHTML, writeHtmlToDom } from './components/writeHtmlToDom.js';
+
+const articleArray = await getAPI(BASE_URL + '/articles');
 
 const cards = document.querySelector('.cardscontainer');
+articleHTML(articleArray, '.cardscontainer');
 
-async function getStrapApi() {
-	let response = await axios.get(`${BASE_URL}/articles`);
+favouriteStorage('.fa-star');
 
-	let articles = response.data;
-	console.log(articles);
+const searchInput = document.querySelector('#searchInput');
+searchInput.onkeyup = () => {
+	let searchResults = filteringAnArray(articleArray, searchInput.value);
+	cards.innerHTML = '';
 
-	articles.forEach(({ title, summary, author }) => {
-		cards.innerHTML += `
-                <div class="col-sm-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">${title}</h5>
-							<p class="card-text">${summary}</p>
-							<p class="card-text">${author}</p>
-                            <div class="readmore">
-                                <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                                <i class="far fa-star"></i>
-                            </div>
-                            
-						</div>
-					</div>
-				</div>
-    
-        `;
-	});
-}
+	articleHTML(searchResults, '.cardscontainer');
+	favouriteStorage('.fa-star');
+};
 
-getStrapApi();
+console.log(articleArray);
