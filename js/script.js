@@ -1,9 +1,5 @@
 import { BASE_URL } from './configs/configs.js';
-import {
-	addToLocalStorage,
-	getFromLocalStorageItem,
-	favouriteStorage,
-} from './libs/localStorage.js';
+import { favouriteStorage } from './libs/localStorage.js';
 import { getAPI } from './libs/apiCalls.js';
 import { filteringAnArray } from './libs/filteringArray.js';
 import { articleHTML, writeHtmlToDom } from './components/writeHtmlToDom.js';

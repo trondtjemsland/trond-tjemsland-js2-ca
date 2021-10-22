@@ -1,10 +1,10 @@
-.cardscontainer {
-	margin-top: 10px;
+.navbar-brand {
+	font-size: 1.6rem;
+	font-weight: bold;
 }
 
-.card {
-	margin-top: 20px;
-	min-width: 200px;
+.headingcontainer {
+	margin-top: 60px;
 }
 
 .fa-star {
@@ -15,4 +15,18 @@
 .readmore {
 	display: flex;
 	justify-content: space-between;
+}
+
+.favouritesBtn {
+	height: 40px;
+	width: 100px;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.removeBtn {
+	height: 40px;
+	width: 100px;
+	border-radius: 5px;
+	margin-top: 20px;
 }

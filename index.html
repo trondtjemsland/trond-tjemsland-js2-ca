@@ -39,16 +39,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="favourites.html"
-									>Favourites</a
-								>
-							</li>
-						</ul>
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 						<form class="d-flex">
 							<input
 								id="searchInput"
@@ -57,9 +48,6 @@
 								placeholder="Search"
 								aria-label="Search"
 							/>
-							<button class="btn btn-outline-success" type="submit">
-								Search
-							</button>
 						</form>
 					</div>
 				</div>
@@ -68,11 +56,18 @@
 		<main>
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-7"><h1>News Articles</h1></div>
+					<div class="col-sm-7 headingcontainer"><h1>News Articles</h1></div>
 				</div>
 			</div>
 			<div class="container articlesContainer">
 				<div class="row cardscontainer"></div>
+				<div class="row">
+					<div class="col-sm-2">
+						<a href="favourites.html"
+							><button class="favouritesBtn">Favourites</button></a
+						>
+					</div>
+				</div>
 			</div>
 		</main>
 		<script

@@ -39,16 +39,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="favourites.html"
-									>Favourites</a
-								>
-							</li>
-						</ul>
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 						<form class="d-flex">
 							<input
 								id="searchInput"
@@ -57,9 +48,6 @@
 								placeholder="Search"
 								aria-label="Search"
 							/>
-							<button class="btn btn-outline-success" type="submit">
-								Search
-							</button>
 						</form>
 					</div>
 				</div>
@@ -72,8 +60,9 @@
 				</div>
 			</div>
 			<div class="container articlesContainer">
+				<div class="alert"></div>
 				<div class="row cardscontainer"></div>
-				<button id="removeBtn">Remove</button>
+				<button class="removeBtn" id="removeBtn">Remove</button>
 			</div>
 		</main>
 
