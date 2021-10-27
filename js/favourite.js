@@ -15,4 +15,5 @@ const clearStorage = document.querySelector('#removeBtn');
 clearStorage.onclick = function () {
 	localStorage.clear('favourites');
 	document.querySelector('.cardscontainer').innerHTML = '';
+	alert('danger', 'Favourites is empty');
 };
